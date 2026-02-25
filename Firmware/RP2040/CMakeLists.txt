@@ -162,6 +162,11 @@ elseif(OGXM_BOARD STREQUAL "ESP32_BLUERETRO_I2C")
     set(EN_BLUERETRO_I2C TRUE)
     set(EN_UART_BRIDGE TRUE)
 
+    elseif(OGXM_BOARD STREQUAL "WS_RP2350_USBA")
+    add_compile_definitions(CONFIG_OGXM_BOARD_WS_RP2350_USBA=1)
+    set(EN_USB_HOST TRUE)
+    set(EN_RGB TRUE)
+
     if(OGXM_RETAIL STREQUAL "TRUE")
         message(STATUS "Retail mode enabled.")
         add_compile_definitions(OGXM_RETAIL=1)
