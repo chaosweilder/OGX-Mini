@@ -1,6 +1,6 @@
 #include "Board/Config.h"
 #include "OGXMini/Board/Standard.h"
-#if ((OGXM_BOARD == PI_PICO) || (OGXM_BOARD == RP2040_ZERO) || (OGXM_BOARD == ADAFRUIT_FEATHER))
+#if ((OGXM_BOARD == PI_PICO) || (OGXM_BOARD == RP2040_ZERO) || (OGXM_BOARD == ADAFRUIT_FEATHER)) || (OGXM_BOARD == WS_RP2350_USBA))
 
 #include <pico/multicore.h>
 
