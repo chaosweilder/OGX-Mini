@@ -10,7 +10,7 @@
 #define EXTERNAL_4CH_I2C    6
 #define INTERNAL_4CH_I2C    7
 #define BOARDS_COUNT        8
-#define WS_RP2350_USBA        9
+#define WS_RP2350_USBA      9
 
 #define SYSCLOCK_KHZ 240000
 
