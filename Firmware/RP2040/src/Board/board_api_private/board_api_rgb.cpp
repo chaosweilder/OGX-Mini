@@ -16,10 +16,10 @@ WS2812& get_ws2812(WS2812::DataFormat format) {
     static WS2812 ws2812_rgb = WS2812(RGB_PXL_PIN, 1, pio1, 1, WS2812::FORMAT_RGB);
 #endif
 
-#if defined(GRB_PXL_PIN)
+#if defined(RGB_PXL_PIN)
     if (format == WS2812::FORMAT_RGB) return ws2812_rgb;
 #endif
-#if defined(RGB_PXL_PIN)
+#if defined(GRB_PXL_PIN)
     return ws2812_grb;
 #endif
 }
