@@ -22,6 +22,7 @@ namespace OGXMini {
         esp32_br_i2c::initialize,   // ESP32_BLUERETRO_I2C
         four_ch_i2c::initialize,    // EXTERNAL_4CH_I2C
         four_ch_i2c::initialize,    // INTERNAL_4CH_I2C
+        standard::initialize,       // WS_RP2350_USBA
     };
 
     static constexpr RunFunc run_func[BOARDS_COUNT] = {
@@ -33,6 +34,7 @@ namespace OGXMini {
         esp32_br_i2c::run,      // ESP32_BLUERETRO_I2C
         four_ch_i2c::run,       // EXTERNAL_4CH_I2C
         four_ch_i2c::run,       // INTERNAL_4CH_I2C
+        standard::run,           // WS_RP2350_USBA
     };
 
     static constexpr HostMountedFunc host_mount_func[BOARDS_COUNT] = {
@@ -44,6 +46,7 @@ namespace OGXMini {
         nullptr,                    // ESP32_BLUERETRO_I2C
         four_ch_i2c::host_mounted,  // EXTERNAL_4CH_I2C
         four_ch_i2c::host_mounted,  // INTERNAL_4CH_I2C
+        standard::host_mounted,     // WS_RP2350_USBA
     };
 
     static constexpr HostMountedWTypeFunc host_mount_w_type_func[BOARDS_COUNT] = {
@@ -55,6 +58,7 @@ namespace OGXMini {
         nullptr,                            // ESP32_BLUERETRO_I2C
         four_ch_i2c::host_mounted_w_type,   // EXTERNAL_4CH_I2C
         four_ch_i2c::host_mounted_w_type,   // INTERNAL_4CH_I2C
+        nullptr,                            // WS_RP2350_USBA
     };
 
     static constexpr WirelessConnectedFunc wl_conn_func[BOARDS_COUNT] = {
@@ -66,6 +70,7 @@ namespace OGXMini {
         nullptr,                            // ESP32_BLUERETRO_I2C
         four_ch_i2c::wireless_connected,    // EXTERNAL_4CH_I2C
         four_ch_i2c::wireless_connected,    // INTERNAL_4CH_I2C
+        nullptr,                            // WS_RP2350_USBA
     };
 
     void initialize() {
