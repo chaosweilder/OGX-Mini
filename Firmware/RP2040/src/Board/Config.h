@@ -84,6 +84,11 @@
     #define ESP_PROG_PIN        20 // ESP32 IO0
     #define ESP_RST_PIN         8  // ESP32 EN
 
+#elif defined(CONFIG_OGXM_BOARD_WS_RP2350_USBA)
+    #define OGXM_BOARD          WS_RP2350_USBA
+    #define RGB_PXL_PIN         16 
+    #define PIO_USB_DP_PIN      12 // DM = 13
+
     #if MAX_GAMEPADS > 1
         #undef MAX_GAMEPADS
         #define MAX_GAMEPADS 1
