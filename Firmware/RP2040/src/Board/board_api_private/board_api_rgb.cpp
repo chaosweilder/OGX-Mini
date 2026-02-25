@@ -35,10 +35,10 @@ void init() {
 }
 
 void set_led(uint8_t r, uint8_t g, uint8_t b) {
-#if defined(GRB_PXL_PIN)
+#if defined(RGB_PXL_PIN)
     get_ws2812(WS2812::FORMAT_RGB).setPixelColor(0, WS2812::RGB(r, g, b));
     get_ws2812(WS2812::FORMAT_RGB).show();
-#elif defined(RGB_PXL_PIN)
+#elif defined(GRB_PXL_PIN)
     get_ws2812(WS2812::FORMAT_GRB).setPixelColor(0, WS2812::RGB(r, g, b));
     get_ws2812(WS2812::FORMAT_GRB).show();
 #endif
